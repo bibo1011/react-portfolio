@@ -24,7 +24,7 @@ function Nav(props) {
                             </li>
                         ))}
                     </ul>
-                    <h2><a href="/"><span className="bluenav">BLUE  </span>RAMAILA ABAD</a></h2>
+                    <h2><a href="/" className="blacknav"><span className="bluenav">BLUE  </span>RAMAILA ABAD</a></h2>
                 </div>
             </nav>
 

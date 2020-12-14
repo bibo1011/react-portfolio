@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Project from '../Project'
+import projects from '../../projects.json'
 
-function Portfolio(currentPage) {
+
+function Portfolio() {
     
-    const { name } = currentPage;
+    const [projectList, setProjectList] = useState(projects)
     return (
         <section>
-            <h1>{(name)}</h1>            
-            <Project page={currentPage.name} />
+            {projectList.map(project => (            
+                <Project
+                    id={project.id}
+                    title={project.title}
+                    image={project.image}
+                    link={project.link}
+                    github={project.github}
+                />
+            ))}  
         </section>
     );
 }
