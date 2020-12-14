@@ -5,39 +5,34 @@ import ContactForm from '../Contact';
 import Nav from '../Nav';
 import Resume from '../Resume';
 
-function Header(){
-    const [contactSelected, setContactSelected] = useState(false)
-    const [pages] = useState ([
-        {
-        name: ':portfolio'
-        },
-        {
-        name: ':resume' 
+function Header() {
+    // Using useState, set the default value for currentPage to 'Home'
+    const [currentPage, handlePageChange] = useState('About');
+
+    // The renderPage method uses a switch statement to render the appropriate current page
+    const renderPage = () => {
+        switch (currentPage) {
+            case 'About':
+                return <About />;
+            case 'Portfolio':
+                return <Portfolio />;
+            case 'Contact':
+                return <ContactForm />;
+            case 'Resume':
+                return <Resume/>
+            default:
+                return <About/>;
         }
-    ]);
-    const [currentPage, setCurrentPage] = useState(pages[0])
+    };
+
     return (
-        <div>
-            <header>
-                <Nav
-                    pages={pages}
-                    setCurrentPage={setCurrentPage}
-                    currentPage={currentPage}
-                    contactSelected={contactSelected}
-                    setContactSelected={setContactSelected}
-                ></Nav>
-            </header>
-            <main>
-                {!contactSelected ? (
-                    <>
-                    <About></About>
-                    <Portfolio></Portfolio>
-                    <Resume></Resume>
-                    </>
-                ):(<ContactForm></ContactForm>)}
-            </main>
-        </div>    
-    )
+        <header>
+            {/* Pass the state value and the setter as props to NavTabs */}
+            <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+            {/* Call the renderPage function passing in the currentPage */}
+            <div>{renderPage(currentPage)}</div>
+        </header>
+    );
 }
 
 export default Header

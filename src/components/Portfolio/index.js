@@ -1,11 +1,15 @@
 import React from 'react';
+import Project from '../Project'
 
-function Portfolio() {
+function Portfolio(currentPage) {
+    
+    const { name } = currentPage;
     return (
-        <div>
-            <h1>Portfolio</h1>
-        </div>
-    )
+        <section>
+            <h1>{(name)}</h1>            
+            <Project page={currentPage.name} />
+        </section>
+    );
 }
 
 export default Portfolio

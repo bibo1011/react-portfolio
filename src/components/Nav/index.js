@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Nav(props) {
-    const {  pages = [], currentPage, setCurrentPage, contactSelected, setContactSelected } = props
+    const tabs = ['About', 'Portfolio', 'Contact', 'Resume'];
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -10,24 +10,19 @@ function Nav(props) {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#about" onClick={() => setContactSelected(false)} >:about</a>
-                        </li>
-
-                        {pages.map((page) => (
-                            <li className={`nav-item active ${currentPage.name === page.name && 'navActive'}`} key={page.name}>
-                                <a href={page.name} className="nav-link" onClick={() => {setContactSelected(false); setCurrentPage(page)}}
-                                >
-                                    {page.name}
+                        {tabs.map(tab => (
+                            <li className="nav-item active" key={tab}>
+                                <a href={'#' + tab.toLowerCase()}
+                                    // Whenever a tab is clicked on,
+                                    // the current page is set through the handlePageChange props.
+                                    onClick={() => props.handlePageChange(tab)}
+                                    className={
+                                        props.currentPage === tab ? 'nav-link active' : 'nav-link'
+                                    }
+                                > {tab}
                                 </a>
                             </li>
                         ))}
-
-                        <li className={`nav-item active ${contactSelected && 'navActive'}`}>
-                            <a href="#contact" className="nav-link" onClick={() => { setContactSelected(true) }} >:contact</a >
-                        </li>
-
-                        
                     </ul>
                     <h2><a href="/"><span className="bluenav">BLUE  </span>RAMAILA ABAD</a></h2>
                 </div>
