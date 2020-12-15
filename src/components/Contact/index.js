@@ -5,32 +5,29 @@ function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const { name, email, message } = formState;
     const [errorMessage, setErrorMessage] = useState('');
-    // isValid conditional statement
 
-
+    // contact form validation
     function handleChange(e) {
         if (e.target.name === 'email') {
             const isValid = validateEmail(e.target.value);
             console.log(isValid)
             if (!isValid) {
                 setErrorMessage('Your email is invalid.');
-                // } else {
-                //     setErrorMessage('');
             } else {
-                if (!e.target.value.length) {
-                    setErrorMessage(`${e.target.name} is required.`);
-                } else {
-                    setErrorMessage('');
-                }
+                setErrorMessage('');
+            }
+        } else {
+            if (!e.target.value.length) {
+                setErrorMessage(`${e.target.name} is required.`);
+            } else {
+                setErrorMessage('');
             }
         }
         if (!errorMessage) {
             setFormState({ ...formState, [e.target.name]: e.target.value })
         }
         console.log('errorMessage', errorMessage);
-        // setFormState(
-        //     {...formState, name: e.target.value}, 
-        // )
+        
     }
     console.log(formState)
     function handleSubmit(e) {
@@ -61,20 +58,11 @@ function ContactForm() {
                             <p className="error-text">{errorMessage}</p>
                         </div>
                     )}
-
-                    {/* conditional statement is the same above. */}
-                    {/* if(errorMessage) {
-                        <div>
-                            <p className="error-text">{errorMessage}</p>
-                        </div>
-                    } */}
-
                     <button type="submit">Submit</button>
                 </div>
             </form>
         </section>
     )
-    // JSX
 }
 
 export default ContactForm;

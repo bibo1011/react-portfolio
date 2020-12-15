@@ -18,7 +18,7 @@ function Project(props) {
                             
                         </li>
                         <li>
-                            <strong>github:<a href={props.link} target="_blank"> {props.github} </a></strong>
+                            <strong>github:<a href={props.github} target="_blank"> {props.github} </a></strong>
                         </li>
                     </ul>
                 </div>

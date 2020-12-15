@@ -6,7 +6,7 @@ import Nav from '../Nav';
 import Resume from '../Resume';
 
 function Header() {
-    // Using useState, set the default value for currentPage to 'Home'
+    // Using useState, set the default value for currentPage to 'About'
     const [currentPage, handlePageChange] = useState('About');
 
     // The renderPage method uses a switch statement to render the appropriate current page
@@ -27,7 +27,7 @@ function Header() {
 
     return (
         <header>
-            {/* Pass the state value and the setter as props to NavTabs */}
+            {/* Pass the state value and the setter as props to Nav */}
             <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
             {/* Call the renderPage function passing in the currentPage */}
             <div>{renderPage(currentPage)}</div>
