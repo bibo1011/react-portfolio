@@ -10,6 +10,7 @@ function About() {
                 At the same time, a student of UC Berkeley Full Stack Coding Bootcamp <br></br>
                 Mechanically inclined, a handyman, future of software...
                 </p >
+                <img className="iam" alt="blue" src={require('../../assets/images/me.png').default }/>
             </div >
         </section >
     )

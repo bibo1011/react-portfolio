@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer>
+        <footer >
             <div class="box-right-contact">
                 <a href="mailto:bibo_1011@yahoo.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/bibo1011"><i class="fab fa-github"></i></a>

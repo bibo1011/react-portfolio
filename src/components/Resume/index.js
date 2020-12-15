@@ -20,8 +20,7 @@ function Resume() {
                 </ul>
             </div>
             <div className="download">
-                <h6> download my resume here </h6>
-                <a target="_blank" href="../../assets/documents/blue VehTestOps.pdf" ><i class="far fa-file"></i></a>
+                <h6> download my resume here <a target="_blank" href={require(`../../assets/documents/blue VehTestOps.pdf`).default} ><i class="far fa-file"></i></a></h6>
             </div>
         </div>
     )   

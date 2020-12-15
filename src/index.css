@@ -62,7 +62,7 @@ header nav ul li a {
 .brand {
   text-align: center;
   line-height: 1.6;
-  padding: 200px;
+  padding: 5% 10% 10% 10%;;
   animation: mymove 5s infinite;
   animation-timing-function: ease;  
 }
@@ -101,7 +101,7 @@ footer {
   align-items: flex-start;
   justify-content: space-between;
   flex: wrap;
-  padding: 2% 20% 2% 20%;
+  padding: 2% 10% 16% 5%;
 }
 .list {
   margin: 0;
@@ -116,9 +116,9 @@ footer {
   padding: 0;
   width: 100%;
 }
-.download a {
+/* .download a {
   padding: 2% 20% 2% 20%;;
-}
+} */
 form {
   width: 40%;
 }
@@ -157,7 +157,7 @@ textarea {
 	padding: 5px;
 }
 #contact-form {
-  padding: 5%;
+  padding: 2% 10% 17% 5%;
 }
 
 .card {
@@ -207,3 +207,10 @@ textarea {
   align-content: flex-start;
   overflow: auto;
 }
+
+.iam {
+  width: 50%;
+}
+
+
+
