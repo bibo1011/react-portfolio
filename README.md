@@ -13,7 +13,7 @@
 
   ![alt text](https://github.com/bibo1011/react-portfolio/raw/main/src/assets/images/screenshots/ch20ss3.png "react portfolio ss2")
 
-  ![alt text](https://github.com/bibo1011/react-portfolio/raw/main/src/images/6/6.png"react portfolio 6")
+  ![alt text](https://github.com/bibo1011/react-portfolio/raw/main/src/assets/images/6/6.png"react portfolio 6")
 
   Link:
 
